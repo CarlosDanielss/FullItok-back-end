@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  database:
+    container_name: 'fullistok_database'
+    image: postgres
+    restart: always
+    ports:
+      - 65432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=fullistok
